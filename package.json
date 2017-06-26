@@ -1,0 +1,49 @@
+{
+    "name": "ijsecl",
+    "version": "0.0.1",
+    "description": "IJSECL is a Javascript ECL kernel for the Jupyter notebook",
+    "keywords": [
+        "javascript",
+        "kernel",
+        "ipython",
+        "jupyter"
+    ],
+    "homepage": "",
+    "bugs": {
+        "url": "https://github.com/xwang2713/ijsecl/issues"
+    },
+    "license": "BSD-3-Clause",
+    "author": {
+        "author": "",
+        "email": "",
+        "url": ""
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/xwang2713/ijsecl.git"
+    },
+    "bin": {
+        "ijsecl": "bin/ijsecl.js",
+        "ijseclconsole": "bin/ijseclconsole.js",
+        "ijseclinstall": "bin/ijseclinstall.js",
+        "ijseclkernel": "lib/kernel.js"
+    },
+    "dependencies": {
+        "jpecl-kernel": "git+http://github.com/xwang2713/jpecl-kernel.git"
+    },
+    "devDependencies": {
+        "debug": "latest",
+        "jmp": "^0.7.5",
+        "jsdoc": "latest",
+        "jshint": "latest",
+        "mocha": "3",
+        "uuid": "^3.0.1"
+    },
+    "scripts": {
+        "doc": "python scripts/doc-build.py",
+        "doc:publish": "node scripts/doc-publish.js gh-pages https://github.com/xwang2713/ijsecl",
+        "lint": "jshint bin lib",
+        "test:ijskernel": "mocha test/ijskernel.js",
+        "test": "npm run lint && npm run test:ijseclkernel"
+    }
+}
